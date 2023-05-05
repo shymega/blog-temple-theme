@@ -39,7 +39,7 @@
         {{ end }}
       </div>
       {{ if .Site.Copyright }}
-      <p id="foot-copyright">{{ .Site.Copyright | safeHTML }}</p>
+      <p id="foot-copyright">{{ replace .Site.Copyright "{year}" now.Year }}</p>
       {{ end }}
     </div>
   </div>
